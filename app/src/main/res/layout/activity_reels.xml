@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".posts.ReelsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/materialtoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="New Reel" />
+
+    <Button
+        android:id="@+id/reelpost"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:layout_marginTop="68dp"
+        android:text="Select Reel"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialtoolbar" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Caption"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:hint="Write a Caption"
+        app:layout_constraintEnd_toEndOf="@+id/reelpost"
+        app:layout_constraintStart_toStartOf="@+id/reelpost"
+        app:layout_constraintTop_toBottomOf="@+id/reelpost">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:maxLines="2"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:text="
+    1. Respect Copyright: Ensure that the content uploaded does not violate copyright laws and respects the intellectual property of others.\n\n
+    2. Avoid Inappropriate Content: Content should not contain nudity, violence, hate speech, or any form of harassment.\n\n
+    3. Follow Community Guidelines: Adhere to Instagram's community guidelines, which promote a safe and respectful environment for all users.\n\n
+    4. Prevent Copyright Infringement: Do not use copyrighted material without proper authorization or licensing.\n\n
+    5. Foster Positive Community: Share content that contributes to a positive online community and avoids spreading misinformation or harmful messages.\n\n
+    6. Compliance with Policies: Agree to comply with Instagram's policies and regulations to prevent content removal or account suspension.\n\n
+    "
+        app:layout_constraintEnd_toEndOf="@+id/Caption"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="@+id/Caption"
+        app:layout_constraintTop_toBottomOf="@+id/Caption" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <Button
+            android:id="@+id/cancelBtn"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            app:strokeColor="@color/pink"
+            android:text="Cancel"
+            android:textSize="20sp"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="@+id/passwordfield"
+            app:layout_constraintStart_toStartOf="@+id/passwordfield"
+            app:layout_constraintTop_toBottomOf="@+id/passwordfield" />
+
+        <Button
+            android:id="@+id/postBtn"
+            style="@style/Widget.Material3.Button.Icon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/blue"
+            android:text="Post"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/passwordfield"
+            app:layout_constraintStart_toStartOf="@+id/passwordfield"
+            app:layout_constraintTop_toBottomOf="@+id/passwordfield" />
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
